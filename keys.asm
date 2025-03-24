@@ -9,16 +9,16 @@ mov     [es:9*4+2],cs
 sti
 mov ax, 0xb800
 mov es, ax
-cmp [program], byte '5'
+cmp [command], byte '5'
 jne .pong
 call paint    ;program that requires custom driver
 jmp .exit
 .pong:
-cmp [program], byte '6' ;this is more like the old exec.asm system, since not all programs use these drivers it'd be harder to implement an array without wasting space because programs 1-4 will never be needed
+cmp [command], byte '6' ;this is more like the old exec.asm system, since not all programs use these drivers it'd be harder to implement an array without wasting space because programs 1-4 will never be needed
 jne .Mandelbrot 
 call pong
 .Mandelbrot:
-cmp [program], byte '7'
+cmp [command], byte '7'
 jne .exit
 call Mandelbrot
 jmp .exit

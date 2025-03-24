@@ -84,7 +84,7 @@ readwrite:
 %include "keys.asm" ;keyboard driver
 %include "pong.asm" ;pong, back for round 2
 %include "mouse.asm" ;mouse driver
-;%include "game.asm" ;An RPG
+%include "game.asm" ;An RPG
 %include "debug.asm" ;contains debugging tools
 ;%include "test.asm"
 %include "spinner.asm"
